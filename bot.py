@@ -84,7 +84,7 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         # --- YENİ SDK İLE DOSYA YÜKLEME ---
         # 1. Dosyayı Yükle
-        uploaded_file = client.files.upload(path=file_path, config={'display_name': selected_file})
+        uploaded_file = client.files.upload(file=file_path, config={'display_name': selected_file})
         
         # 2. İşlenmesini Bekle
         while uploaded_file.state == "PROCESSING":
